@@ -1,44 +1,30 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de Equipos Médicos</title>
+    <title>EQUIPOS MÉDICOS</title>
     <style>
-        body { font-family: sans-serif; background-color: #f4f7f6; display: flex; flex-direction: column; align-items: center; padding: 20px; }
-        h1 { color: #2c3e50; }
-        .container { display: grid; gap: 15px; width: 100%; max-width: 400px; }
-        .btn {
-            display: block;
-            padding: 18px;
-            text-align: center;
-            text-decoration: none;
-            color: white;
-            border-radius: 10px;
-            font-weight: bold;
-            font-size: 16px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        body { font-family: Arial; text-align: center; padding: 20px; background: #eee; }
+        .boton { 
+            display: block; width: 100%; max-width: 300px; margin: 15px auto;
+            padding: 20px; color: white; text-decoration: none; font-weight: bold;
+            border-radius: 10px; box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
         }
-        /* Colores para identificar rápido cada equipo */
-        .btn-1 { background-color: #e74c3c; } /* Rojo */
-        .btn-2 { background-color: #3498db; } /* Azul */
-        .btn-3 { background-color: #27ae60; } /* Verde */
-        .btn-4 { background-color: #f39c12; } /* Naranja */
-        .btn-5 { background-color: #8e44ad; } /* Morado */
-        .btn:hover { opacity: 0.8; transform: scale(1.02); }
     </style>
 </head>
 <body>
+    <h2>CONTROL DE EQUIPOS</h2>
 
-    <h1>Panel de Control</h1>
-
-    <div class="container">
-        <a href="https://mpdesfibrilador.streamlit.app/" class="btn btn-1" target="_blank">DESFIBRILADOR</a>
-        <a href="https://mpanestesia1.streamlit.app/" class="btn btn-2" target="_blank">MÁQUINA DE ANESTESIA</a>
-        <a href="https://mpmonitorsignosvitales.streamlit.app/" class="btn btn-3" target="_blank">MONITORES</a>
-        <a href="https://mpincubadora.streamlit.app/" class="btn btn-4" target="_blank">INCUBADORAS</a>
-        <a href="https://mpventiladormecanico.streamlit.app/" class="btn btn-5" target="_blank">VENTILADORES</a>
-    </div>
+    <a href="https://mpdesfibrilador.streamlit.app/" class="boton" style="background:#e74c3c;">DESFIBRILADOR</a>
+    
+    <a href="https://mpanestesia1.streamlit.app/" class="boton" style="background:#3498db;">MÁQUINA DE ANESTESIA</a>
+    
+    <a href="https://mpmonitorsignosvitales.streamlit.app/" class="boton" style="background:#27ae60;">MONITORES</a>
+    
+    <a href="https://mpincubadora.streamlit.app/" class="boton" style="background:#f39c12;">INCUBADORAS</a>
+    
+    <a href="https://mpventiladormecanico.streamlit.app/" class="boton" style="background:#8e44ad;">VENTILADORES</a>
 
 </body>
 </html>
