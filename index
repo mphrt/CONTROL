@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control - Equipos Médicos</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        h1 { color: #1a3a5a; margin-bottom: 30px; }
+        .container {
+            display: grid;
+            gap: 15px;
+            width: 90%;
+            max-width: 400px;
+        }
+        .btn {
+            display: block;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn:active { transform: scale(0.98); }
+        
+        /* Colores diferenciadores */
+        .defib { background-color: #e74c3c; }
+        .anest { background-color: #3498db; }
+        .monit { background-color: #27ae60; }
+        .incub { background-color: #f39c12; }
+        .venti { background-color: #8e44ad; }
+
+        .btn:hover { opacity: 0.9; }
+    </style>
+</head>
+<body>
+
+    <h1>Gestión de Equipos</h1>
+
+    <div class="container">
+        <a href="https://mpdesfibrilador.streamlit.app/" class="btn defib" target="_blank">DESFIBRILADOR</a>
+        <a href="https://mpanestesia1.streamlit.app/" class="btn anest" target="_blank">MÁQUINA DE ANESTESIA</a>
+        <a href="https://mpmonitorsignosvitales.streamlit.app/" class="btn monit" target="_blank">MONITORES</a>
+        <a href="https://mpincubadora.streamlit.app/" class="btn incub" target="_blank">INCUBADORAS</a>
+        <a href="https://mpventiladormecanico.streamlit.app/" class="btn venti" target="_blank">VENTILADORES</a>
+    </div>
+
+</body>
+</html>
