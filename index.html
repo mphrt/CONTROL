@@ -1,30 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EQUIPOS MÉDICOS</title>
+    <title>Panel de Equipos Médicos</title>
     <style>
-        body { font-family: Arial; text-align: center; padding: 20px; background: #eee; }
-        .boton { 
-            display: block; width: 100%; max-width: 300px; margin: 15px auto;
-            padding: 20px; color: white; text-decoration: none; font-weight: bold;
-            border-radius: 10px; box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        /* Estilos para que se vea bien en celulares y computadoras */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #1a3a5a;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .container {
+            display: grid;
+            gap: 15px;
+            width: 100%;
+            max-width: 400px; /* Tamaño ideal para móvil */
+        }
+
+        .btn {
+            display: block;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Colores específicos para cada botón */
+        .defib { background-color: #e74c3c; } /* Rojo */
+        .anest { background-color: #3498db; } /* Azul */
+        .monit { background-color: #27ae60; } /* Verde */
+        .incub { background-color: #f39c12; } /* Naranja */
+        .venti { background-color: #8e44ad; } /* Morado */
+
+        .btn:hover {
+            opacity: 0.9;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
     </style>
 </head>
 <body>
-    <h2>CONTROL DE EQUIPOS</h2>
 
-    <a href="https://mpdesfibrilador.streamlit.app/" class="boton" style="background:#e74c3c;">DESFIBRILADOR</a>
-    
-    <a href="https://mpanestesia1.streamlit.app/" class="boton" style="background:#3498db;">MÁQUINA DE ANESTESIA</a>
-    
-    <a href="https://mpmonitorsignosvitales.streamlit.app/" class="boton" style="background:#27ae60;">MONITORES</a>
-    
-    <a href="https://mpincubadora.streamlit.app/" class="boton" style="background:#f39c12;">INCUBADORAS</a>
-    
-    <a href="https://mpventiladormecanico.streamlit.app/" class="boton" style="background:#8e44ad;">VENTILADORES</a>
+    <h1>GESTIÓN DE EQUIPOS MÉDICOS</h1>
+
+    <div class="container">
+        <a href="https://mpdesfibrilador.streamlit.app/" class="btn defib" target="_blank">DESFIBRILADOR</a>
+        
+        <a href="https://mpanestesia1.streamlit.app/" class="btn anest" target="_blank">MÁQUINA DE ANESTESIA</a>
+        
+        <a href="https://mpmonitorsignosvitales.streamlit.app/" class="btn monit" target="_blank">MONITORES</a>
+        
+        <a href="https://mpincubadora.streamlit.app/" class="btn incub" target="_blank">INCUBADORAS</a>
+        
+        <a href="https://mpventiladormecanico.streamlit.app/" class="btn venti" target="_blank">VENTILADORES</a>
+    </div>
 
 </body>
 </html>
