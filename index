@@ -3,59 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de Control - Equipos Médicos</title>
+    <title>Panel de Equipos Médicos</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-        h1 { color: #1a3a5a; margin-bottom: 30px; }
-        .container {
-            display: grid;
-            gap: 15px;
-            width: 90%;
-            max-width: 400px;
-        }
+        body { font-family: sans-serif; background-color: #f4f7f6; display: flex; flex-direction: column; align-items: center; padding: 20px; }
+        h1 { color: #2c3e50; }
+        .container { display: grid; gap: 15px; width: 100%; max-width: 400px; }
         .btn {
             display: block;
-            padding: 20px;
+            padding: 18px;
             text-align: center;
             text-decoration: none;
             color: white;
-            border-radius: 12px;
+            border-radius: 10px;
             font-weight: bold;
-            font-size: 1.1em;
-            transition: transform 0.2s, background-color 0.2s;
+            font-size: 16px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        .btn:active { transform: scale(0.98); }
-        
-        /* Colores diferenciadores */
-        .defib { background-color: #e74c3c; }
-        .anest { background-color: #3498db; }
-        .monit { background-color: #27ae60; }
-        .incub { background-color: #f39c12; }
-        .venti { background-color: #8e44ad; }
-
-        .btn:hover { opacity: 0.9; }
+        /* Colores para identificar rápido cada equipo */
+        .btn-1 { background-color: #e74c3c; } /* Rojo */
+        .btn-2 { background-color: #3498db; } /* Azul */
+        .btn-3 { background-color: #27ae60; } /* Verde */
+        .btn-4 { background-color: #f39c12; } /* Naranja */
+        .btn-5 { background-color: #8e44ad; } /* Morado */
+        .btn:hover { opacity: 0.8; transform: scale(1.02); }
     </style>
 </head>
 <body>
 
-    <h1>Gestión de Equipos</h1>
+    <h1>Panel de Control</h1>
 
     <div class="container">
-        <a href="https://mpdesfibrilador.streamlit.app/" class="btn defib" target="_blank">DESFIBRILADOR</a>
-        <a href="https://mpanestesia1.streamlit.app/" class="btn anest" target="_blank">MÁQUINA DE ANESTESIA</a>
-        <a href="https://mpmonitorsignosvitales.streamlit.app/" class="btn monit" target="_blank">MONITORES</a>
-        <a href="https://mpincubadora.streamlit.app/" class="btn incub" target="_blank">INCUBADORAS</a>
-        <a href="https://mpventiladormecanico.streamlit.app/" class="btn venti" target="_blank">VENTILADORES</a>
+        <a href="https://mpdesfibrilador.streamlit.app/" class="btn btn-1" target="_blank">DESFIBRILADOR</a>
+        <a href="https://mpanestesia1.streamlit.app/" class="btn btn-2" target="_blank">MÁQUINA DE ANESTESIA</a>
+        <a href="https://mpmonitorsignosvitales.streamlit.app/" class="btn btn-3" target="_blank">MONITORES</a>
+        <a href="https://mpincubadora.streamlit.app/" class="btn btn-4" target="_blank">INCUBADORAS</a>
+        <a href="https://mpventiladormecanico.streamlit.app/" class="btn btn-5" target="_blank">VENTILADORES</a>
     </div>
 
 </body>
