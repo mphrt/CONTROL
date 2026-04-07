@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Equipos Médicos</title>
     <style>
-        /* Estilos para que se vea bien en celulares y computadoras */
+        /* Estilos generales */
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: #f0f4f8;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f7f9; /* Fondo muy claro y limpio */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -19,17 +19,18 @@
         }
 
         h1 {
-            color: #1a3a5a;
+            color: #4a6fa5; /* Azul desaturado para el título */
             margin-bottom: 30px;
             text-align: center;
             font-size: 24px;
+            letter-spacing: 1px;
         }
 
         .container {
             display: grid;
             gap: 15px;
             width: 100%;
-            max-width: 400px; /* Tamaño ideal para móvil */
+            max-width: 400px;
         }
 
         .btn {
@@ -37,31 +38,34 @@
             padding: 20px;
             text-align: center;
             text-decoration: none;
-            color: white;
+            color: #444; /* Texto gris oscuro para mejor contraste sobre pastel */
             border-radius: 12px;
-            font-weight: bold;
+            font-weight: 600;
             font-size: 16px;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.05);
             cursor: pointer;
         }
 
+        /* Efectos de interacción */
         .btn:active {
-            transform: scale(0.95);
+            transform: scale(0.98);
         }
-
-        /* Colores específicos para cada botón */
-        .defib { background-color: #e74c3c; } /* Rojo */
-        .anest { background-color: #3498db; } /* Azul */
-        .monit { background-color: #27ae60; } /* Verde */
-        .incub { background-color: #f39c12; } /* Naranja */
-        .venti { background-color: #8e44ad; } /* Morado */
 
         .btn:hover {
-            opacity: 0.9;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            opacity: 0.85;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
         }
+
+        /* Colores Azul Pastel específicos */
+        .defib { background-color: #a2d2ff; } /* Azul cielo pastel */
+        .anest { background-color: #bde0fe; } /* Azul claro suave */
+        .monit { background-color: #caf0f8; } /* Azul cian muy claro */
+        .incub { background-color: #d6e2ff; } /* Azul pervinca suave */
+        .venti { background-color: #c0fdff; } /* Azul aguamarina pálido */
+
     </style>
 </head>
 <body>
