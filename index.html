@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Equipos Médicos</title>
     <style>
-        /* Estilos generales */
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f4f7f9; /* Fondo muy claro y limpio */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9ecef; /* Fondo grisáceo neutro */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -19,69 +18,68 @@
         }
 
         h1 {
-            color: #4a6fa5; /* Azul desaturado para el título */
-            margin-bottom: 30px;
+            color: #34495e; /* Gris azulado oscuro */
+            margin-bottom: 35px;
             text-align: center;
-            font-size: 24px;
+            font-size: 22px;
+            text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         .container {
             display: grid;
-            gap: 15px;
+            gap: 12px;
             width: 100%;
-            max-width: 400px;
+            max-width: 380px;
         }
 
         .btn {
             display: block;
-            padding: 20px;
+            padding: 18px;
             text-align: center;
             text-decoration: none;
-            color: #444; /* Texto gris oscuro para mejor contraste sobre pastel */
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            border: 1px solid rgba(0,0,0,0.05);
+            /* Azul acero oscuro y mate */
+            background-color: #4a6984 !important; 
+            color: #ffffff !important; 
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 15px;
+            transition: background-color 0.3s, transform 0.2s;
+            border: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             cursor: pointer;
         }
 
-        /* Efectos de interacción */
-        .btn:active {
-            transform: scale(0.98);
-        }
+        /* Variaciones sutiles para no ser monótono, pero todas oscuras */
+        .tipo-a { background-color: #546e7a !important; } /* Gris azulado */
+        .tipo-b { background-color: #455a64 !important; } /* Pizarra oscuro */
+        .tipo-c { background-color: #37474f !important; } /* Carbón azulado */
 
         .btn:hover {
-            opacity: 0.85;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transform: translateY(-2px);
+            background-color: #2c3e50 !important; /* Más oscuro al pasar el cursor */
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
-        /* Colores Azul Pastel específicos */
-        .defib { background-color: #a2d2ff; } /* Azul cielo pastel */
-        .anest { background-color: #bde0fe; } /* Azul claro suave */
-        .monit { background-color: #caf0f8; } /* Azul cian muy claro */
-        .incub { background-color: #d6e2ff; } /* Azul pervinca suave */
-        .venti { background-color: #c0fdff; } /* Azul aguamarina pálido */
-
+        .btn:active {
+            transform: scale(0.97);
+        }
     </style>
 </head>
 <body>
 
-    <h1>GESTIÓN DE EQUIPOS MÉDICOS</h1>
+    <h1>Gestión de Equipos Médicos</h1>
 
     <div class="container">
-        <a href="https://mpdesfibrilador.streamlit.app/" class="btn defib" target="_blank">DESFIBRILADOR</a>
+        <a href="https://mpdesfibrilador.streamlit.app/" class="btn tipo-a" target="_blank">DESFIBRILADOR</a>
         
-        <a href="https://mpanestesia1.streamlit.app/" class="btn anest" target="_blank">MÁQUINA DE ANESTESIA</a>
+        <a href="https://mpanestesia1.streamlit.app/" class="btn tipo-b" target="_blank">MÁQUINA DE ANESTESIA</a>
         
-        <a href="https://mpmonitorsignosvitales.streamlit.app/" class="btn monit" target="_blank">MONITORES</a>
+        <a href="https://mpmonitorsignosvitales.streamlit.app/" class="btn tipo-c" target="_blank">MONITORES</a>
         
-        <a href="https://mpincubadora.streamlit.app/" class="btn incub" target="_blank">INCUBADORAS</a>
+        <a href="https://mpincubadora.streamlit.app/" class="btn tipo-a" target="_blank">INCUBADORAS</a>
         
-        <a href="https://mpventiladormecanico.streamlit.app/" class="btn venti" target="_blank">VENTILADORES</a>
+        <a href="https://mpventiladormecanico.streamlit.app/" class="btn tipo-b" target="_blank">VENTILADORES</a>
     </div>
 
 </body>
