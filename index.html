@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Equipos Médicos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #e9ecef; /* Fondo grisáceo neutro */
+            background-color: #e9ecef;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -15,34 +16,34 @@
             min-height: 100vh;
             margin: 0;
             padding: 20px;
-            position: relative; /* Necesario para el posicionamiento de las esquinas */
+            overflow: hidden; /* Evita que aparezca la barra de desplazamiento */
         }
 
         /* Texto esquina superior izquierda */
         .corner-top-left {
-            position: absolute;
+            position: fixed;
             top: 15px;
             left: 15px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: bold;
             color: #34495e;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        /* Texto esquina inferior derecha en cursiva */
+        /* Texto esquina inferior derecha - Estilo Bonito */
         .corner-bottom-right {
-            position: absolute;
+            position: fixed;
             bottom: 15px;
-            right: 15px;
-            font-size: 14px;
-            font-weight: bold;
-            color: #34495e;
-            font-style: italic; /* Letra cursiva */
+            right: 20px;
+            font-family: 'Dancing Script', cursive; /* Fuente elegante */
+            font-size: 22px;
+            color: #2c3e50;
         }
 
         h1 {
-            color: #34495e; /* Gris azulado oscuro */
-            margin-bottom: 35px;
+            color: #34495e;
+            margin-bottom: 30px;
             text-align: center;
             font-size: 22px;
             text-transform: uppercase;
@@ -51,49 +52,41 @@
 
         .container {
             display: grid;
-            gap: 12px;
+            gap: 10px;
             width: 100%;
             max-width: 380px;
         }
 
         .btn {
             display: block;
-            padding: 18px;
+            padding: 16px;
             text-align: center;
             text-decoration: none;
-            /* Azul acero oscuro y mate */
             background-color: #4a6984 !important; 
             color: #ffffff !important; 
             border-radius: 8px;
             font-weight: 500;
             font-size: 15px;
-            transition: background-color 0.3s, transform 0.2s;
+            transition: all 0.3s ease;
             border: none;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            cursor: pointer;
         }
 
-        /* Variaciones sutiles */
         .tipo-a { background-color: #546e7a !important; }
         .tipo-b { background-color: #455a64 !important; }
         .tipo-c { background-color: #37474f !important; }
 
         .btn:hover {
             background-color: #2c3e50 !important;
-            transform: translateY(-1px);
+            transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-
-        .btn:active {
-            transform: scale(0.97);
         }
     </style>
 </head>
 <body>
 
     <div class="corner-top-left">PANEL DE GESTIÓN DE EQUIPOS MÉDICOS</div>
-    <div class="corner-bottom-right">GABRIELAR</div>
-
+    
     <h1>Gestión de Equipos Médicos</h1>
 
     <div class="container">
@@ -103,6 +96,8 @@
         <a href="https://mpincubadora.streamlit.app/" class="btn tipo-a" target="_blank">INCUBADORAS</a>
         <a href="https://mpventiladormecanico.streamlit.app/" class="btn tipo-b" target="_blank">VENTILADORES</a>
     </div>
+
+    <div class="corner-bottom-right">GabrielaR</div>
 
 </body>
 </html>
