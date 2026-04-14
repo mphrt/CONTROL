@@ -15,18 +15,29 @@
             min-height: 100vh;
             margin: 0;
             padding: 20px;
-            position: relative; /* Necesario para posicionar el texto de la esquina */
+            position: relative; /* Necesario para el posicionamiento de las esquinas */
         }
 
-        /* Estilo para el texto en la esquina superior izquierda */
-        .header-top-left {
+        /* Texto esquina superior izquierda */
+        .corner-top-left {
             position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 14px;
+            top: 15px;
+            left: 15px;
+            font-size: 12px;
             font-weight: bold;
             color: #34495e;
-            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        /* Texto esquina inferior derecha */
+        .corner-bottom-right {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #34495e;
+            text-transform: uppercase;
         }
 
         h1 {
@@ -50,7 +61,6 @@
             padding: 18px;
             text-align: center;
             text-decoration: none;
-            /* Azul acero oscuro y mate */
             background-color: #4a6984 !important; 
             color: #ffffff !important; 
             border-radius: 8px;
@@ -62,13 +72,12 @@
             cursor: pointer;
         }
 
-        /* Variaciones sutiles para no ser monótono, pero todas oscuras */
-        .tipo-a { background-color: #546e7a !important; } /* Gris azulado */
-        .tipo-b { background-color: #455a64 !important; } /* Pizarra oscuro */
-        .tipo-c { background-color: #37474f !important; } /* Carbón azulado */
+        .tipo-a { background-color: #546e7a !important; }
+        .tipo-b { background-color: #455a64 !important; }
+        .tipo-c { background-color: #37474f !important; }
 
         .btn:hover {
-            background-color: #2c3e50 !important; /* Más oscuro al pasar el cursor */
+            background-color: #2c3e50 !important;
             transform: translateY(-1px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
@@ -76,40 +85,22 @@
         .btn:active {
             transform: scale(0.97);
         }
-
-        /* Estilo para el nuevo enlace */
-        .link-control {
-            margin-top: 30px;
-            font-size: 14px;
-            color: #4a6984;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .link-control:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
 
-    <div class="header-top-left">PANEL DE GESTIÓN DE EQUIPOS MÉDICOS/GR8</div>
+    <div class="corner-top-left">PANEL DE GESTIÓN DE EQUIPOS MÉDICOS</div>
+    <div class="corner-bottom-right">GABRIELAR</div>
 
     <h1>Gestión de Equipos Médicos</h1>
 
     <div class="container">
         <a href="https://mpdesfibrilador.streamlit.app/" class="btn tipo-a" target="_blank">DESFIBRILADOR</a>
-        
         <a href="https://mpanestesia1.streamlit.app/" class="btn tipo-b" target="_blank">MÁQUINA DE ANESTESIA</a>
-        
         <a href="https://mpmonitorsignosvitales.streamlit.app/" class="btn tipo-c" target="_blank">MONITORES</a>
-        
         <a href="https://mpincubadora.streamlit.app/" class="btn tipo-a" target="_blank">INCUBADORAS</a>
-        
         <a href="https://mpventiladormecanico.streamlit.app/" class="btn tipo-b" target="_blank">VENTILADORES</a>
     </div>
-
-    <a href="https://mphrt.github.io/CONTROL/GABRIELAR" class="link-control">Acceder a CONTROL/GABRIELAR</a>
 
 </body>
 </html>
