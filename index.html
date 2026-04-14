@@ -15,6 +15,18 @@
             min-height: 100vh;
             margin: 0;
             padding: 20px;
+            position: relative; /* Necesario para posicionar el texto de la esquina */
+        }
+
+        /* Estilo para el texto en la esquina superior izquierda */
+        .header-top-left {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #34495e;
+            letter-spacing: 0.5px;
         }
 
         h1 {
@@ -64,9 +76,24 @@
         .btn:active {
             transform: scale(0.97);
         }
+
+        /* Estilo para el nuevo enlace */
+        .link-control {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #4a6984;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .link-control:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
+
+    <div class="header-top-left">PANEL DE GESTIÓN DE EQUIPOS MÉDICOS/GR8</div>
 
     <h1>Gestión de Equipos Médicos</h1>
 
@@ -81,6 +108,8 @@
         
         <a href="https://mpventiladormecanico.streamlit.app/" class="btn tipo-b" target="_blank">VENTILADORES</a>
     </div>
+
+    <a href="https://mphrt.github.io/CONTROL/GABRIELAR" class="link-control">Acceder a CONTROL/GABRIELAR</a>
 
 </body>
 </html>
